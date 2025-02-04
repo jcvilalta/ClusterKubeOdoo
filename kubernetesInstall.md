@@ -135,6 +135,11 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=192.168.0.20
 ```
 ⚠️Apunta la comanda que apareixerà per unir els workers al cluster⚠️
+## Comanda per unir els workers al master (executar en cada worker node)
+```bash
+kubeadm join 192.168.0.20:6443 --token m5t90n.tzvabglsnui6tydc \
+--discovery-token-ca-cert-hash sha256:158c96b044801dede4833d0ca8197ff687afa8fe58881372027353b4c1c0b108
+```
 
 3.2. Configurar kubectl per l'usuari actual
 ```bash
