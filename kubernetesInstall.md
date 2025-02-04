@@ -21,9 +21,9 @@
 
    Afegir els noms d'host al fitxer /etc/hosts a tots els servidors:
    ```bash
-   echo "192.168.0.120 master01b" | sudo tee -a /etc/hosts
-   echo "192.168.0.121 worker01b" | sudo tee -a /etc/hosts
-   echo "192.168.0.122 worker02b" | sudo tee -a /etc/hosts
+   echo "192.168.0.20 master01b" | sudo tee -a /etc/hosts
+   echo "192.168.0.21 worker01b" | sudo tee -a /etc/hosts
+   echo "192.168.0.22 worker02b" | sudo tee -a /etc/hosts
    ```
    1.3. Desactivar Swap (si hi ha partició swap)
    ```bash
@@ -127,11 +127,11 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
 3. Configurar el node Master
-**⚠️Executa només en el servidor master01b (192.168.0.120)⚠️**
+**⚠️Executa només en el servidor master01b (192.168.0.20)⚠️**
 
 3.1. Inicialitzar el cluster Kubernetes
 ```bash
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=192.168.0.120
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=192.168.0.20
 ```
 ⚠️Apunta la comanda que apareixerà per unir els workers al cluster⚠️
 
