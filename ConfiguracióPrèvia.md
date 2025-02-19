@@ -16,3 +16,8 @@ net.ipv4.ip_forward = 1
 EOF
 sudo sysctl --system
 ```
+## Instal·lar Docker (container runtime)
+```bash
+sudo apt install -y docker.io
+sudo systemctl enable docker --now
+```
